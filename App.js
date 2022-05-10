@@ -132,7 +132,7 @@ const PodControl = gestureHandlerRootHOC(() => {
       const newTelegraph = Math.min(100, Math.max(-100, telegraph + panState.processChange(change)))
       setTelegraph(newTelegraph)
       if (newTelegraph == 0) {
-        Vibration.vibrate([0, 200, 200, 200])
+        Vibration.vibrate(500)
       }
     }  
   })
@@ -175,9 +175,15 @@ const PodControl = gestureHandlerRootHOC(() => {
       }
     }
     // console.log(`angle is ${angle} in ${rotationState.constructor.name}`)
-    const newAngle = angle + rotationState.processChange(change)
+    let newAngle = angle + rotationState.processChange(change)
+    if (newAngle > 180) {
+      newAngle = 360 - newAngle
+    }
     if (newAngle == 0 && angle !== newAngle) {
-      Vibration.vibrate([0, 200, 200, 200])      
+      Vibration.vibrate(500)      
+    }
+    if ([30, 60, 90, 180].includes(newAngle)) {
+      Vibration.vibrate(200)
     }
     setAngle(newAngle)
   })
