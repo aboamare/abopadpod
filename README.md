@@ -2,7 +2,7 @@
 A React Native app to turn tablet into a ship pod controller.
 
 ## Development setup
-AboPodPad is a React Native application, so you need to setup an development environment. Best to follow the [React Native guidelines](https://reactnative.dev/docs/environment-setup) for this, but it means ensuring that you have a good Java install and the Android Studio with the correct Android SDK version. Next ensure that the Android device is setup for debugging.
+AboPadPod is a React Native application, so you need to setup an development environment. Best to follow the [React Native guidelines](https://reactnative.dev/docs/environment-setup) for this, but it means ensuring that you have a good Java install and the Android Studio with the correct Android SDK version. Next ensure that the Android device is setup for debugging.
 A normal `npm install` should install the required dependencies.
 This little app uses the [React Native Gesture Handler](https://docs.swmansion.com/react-native-gesture-handler/) which likes to install Expo, but that is not needed otherwise. Development can be done with the basic React Native tools i.e. start Metro with `npx react-native start` and in another shell execute `npx react-native run-android`.
 
